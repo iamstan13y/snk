@@ -3,16 +3,19 @@ description: "Generates a snake game from a github user contributions grid. Outp
 author: "platane"
 
 runs:
-  using: node16
+  using: node20
   main: dist/index.js
 
 inputs:
   github_user_name:
     description: "github user name"
     required: true
+  github_token:
+    description: "github token used to fetch the contribution calendar. Default to the action token if empty."
+    required: false
+    default: ${{ github.token }}
   outputs:
     required: false
-    default: null
     description: |
       list of files to generate.
       one file per line. Each output can be customized with options as query string.

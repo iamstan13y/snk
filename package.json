@@ -1,20 +1,20 @@
 {
   "name": "snk",
   "description": "Generates a snake game from a github user contributions grid",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "private": true,
   "repository": "github:platane/snk",
   "devDependencies": {
     "@sucrase/jest-plugin": "3.0.0",
-    "@types/jest": "29.5.3",
-    "@types/node": "16.18.38",
-    "jest": "29.6.1",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.11.19",
+    "jest": "29.7.0",
     "prettier": "2.8.8",
-    "sucrase": "3.33.0",
-    "typescript": "5.1.6"
+    "sucrase": "3.35.0",
+    "typescript": "5.3.3"
   },
   "workspaces": [
-    "packages/**"
+    "packages/*"
   ],
   "jest": {
     "testEnvironment": "node",

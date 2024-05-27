@@ -1,4 +1,4 @@
-FROM node:16-slim as builder
+FROM node:20-slim as builder
 
 WORKDIR /app
 
@@ -18,12 +18,12 @@ RUN yarn build:action
 
 
 
-FROM node:16-slim
+FROM node:20-slim
 
 WORKDIR /action-release
 
 RUN export YARN_CACHE_FOLDER="$(mktemp -d)" \
-    && yarn add canvas@2.10.2 gifsicle@5.3.0 --no-lockfile \
+    && yarn add canvas@2.11.2 gifsicle@5.3.0 --no-lockfile \
     && rm -r "$YARN_CACHE_FOLDER"
 
 COPY --from=builder /app/packages/action/dist/ /action-release/
